@@ -3,6 +3,30 @@ Release 1.16 (development)
 
 .. rubric:: Enhancements
 
+* Add support for polling based on the existing HTTP(S) streaming (see
+  :ref:`sec-polling`).
+  The polling functionality in RAUC allows a device to periodically check for
+  updates from a specified URL.
+  It fetches bundle manifests, checks for available updates, and initiates
+  installations if necessary.
+  This functionality is intended to automate the update process and ensure that
+  the system remains up-to-date with minimal manual intervention.
+
+  .. note::
+
+    Polling is currently available at a preview level.
+
+    This means that we want to allow users to try out this new feature and report
+    their experiences, but also that your use case may not be fully supported yet.
+    Depending on the feedback, we may need to change behaviour in ways that require
+    corresponding changes to your ``system.conf``.
+    So, try it out and report back `using GitHub discussions
+    <https://github.com/rauc/rauc/discussions/categories/general>`_ or
+    in the `Matrix/IRC chat channel <https://matrix.to/#/#rauc:matrix.org>`_, but
+    don't rely on it for products yet.
+    We intend to stabilize this feature as soon as we have confidence that the
+    common use cases work well.
+
 .. rubric:: Bug fixes
 
 .. rubric:: Testing
